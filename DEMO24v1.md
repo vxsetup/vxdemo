@@ -148,55 +148,105 @@ HQ-R
 Переходим в каталог FRR
 
 ![image](https://github.com/vxsetup/vxdemo/assets/146210764/73a27483-20a8-4f18-992f-fe8a978d9e0e)
+
 ![image](https://github.com/vxsetup/vxdemo/assets/146210764/b966da7f-b586-4a9f-b731-6cf2b606df5e)
+
 Открываем daemons
+
 ![image](https://github.com/vxsetup/vxdemo/assets/146210764/e71d6829-9847-495b-8515-7c4fd2784d8e)
+
 СТАВИМ YES вместо NO чтобы оспф работал
+
 ![image](https://github.com/vxsetup/vxdemo/assets/146210764/f0bc8cbf-86c9-4906-8ca1-95e86beca4be)
+
 сохраняем
+
 РЕБУТИМ виртуалку
+
 пишем в терминале vtysh
+
 и у нас появляется такой же интерфейс как и в роутерах циско
+
 пишем conf t, чтобы войти в привилегированный режим
+
 ![image](https://github.com/vxsetup/vxdemo/assets/146210764/fa831219-5455-4c67-a62a-5c00727ce013)
+
 Дальше пишем router ospf, чтобы начать настройку оспф
+
 ну по классике задаем айди, пишем сети
+
 ![image](https://github.com/vxsetup/vxdemo/assets/146210764/e4e6cdea-89f6-44ea-8e12-7cba26fc8ff3)
+
 САМОЕ ГЛАВНОЕ ПИШЕМ DO WR  ЧТОБЫ СОХРАНИТЬ НАСТРОЙКИ
+
 ИНАЧЕ ВСЕ СЛЕТИТ ПРИ ПЕРЕЗАГРУЗКЕ 
+
 ![image](https://github.com/vxsetup/vxdemo/assets/146210764/40336076-74c1-411a-a0b9-460c4f6a19f2)
+
 ![image](https://github.com/vxsetup/vxdemo/assets/146210764/bb0af1d3-a231-4c08-90b0-5f47a2452d1b)
+
 Теперь повторяем эту же операцию на двух других роутерах
+
 ISP
+
 ![image](https://github.com/vxsetup/vxdemo/assets/146210764/daab1f8f-fa61-41ae-a976-73b0a8d5ea94)
+
 включаем
+
 ребутаем
+
 ![image](https://github.com/vxsetup/vxdemo/assets/146210764/ac8249f1-2cb9-420e-a3ed-9127fdef17d2)
+
 BR-R
+
 ![image](https://github.com/vxsetup/vxdemo/assets/146210764/6c9c40d7-f82c-4302-8f86-e82a6cb88328)
+
 reboot
+
 ![image](https://github.com/vxsetup/vxdemo/assets/146210764/35fb9433-5c90-403a-91a3-37d9e0c3b6e1)
+
 Проверим настройку оспф
+
 Смотрим соседей
+
 ISP
+
 ![image](https://github.com/vxsetup/vxdemo/assets/146210764/cb081960-9ab4-4b27-ae9a-d2eea147f284)
+
 HQ-R
+
 ![image](https://github.com/vxsetup/vxdemo/assets/146210764/b6dbd4ba-2070-4950-9124-8db7c4e9f137)
+
 BR-R
+
 ![image](https://github.com/vxsetup/vxdemo/assets/146210764/da762f0c-5aec-4aa5-a395-b027eee06fd7)
+
 Видим, что соседи есть, значит настроенно правильно
+
 пингуем br-srv hq-srv
+
 ![image](https://github.com/vxsetup/vxdemo/assets/146210764/6caf9adc-8c45-4d71-a10b-5c42bbb531d2)
+
 НАСТРОЙКА УЧЕТНЫХ ЗАПИСЕЙ
+
 ![image](https://github.com/vxsetup/vxdemo/assets/146210764/9bdd2e07-f5f1-47ae-b0bc-b3dd5e03cc30)
+
 CLI
+
 ![image](https://github.com/vxsetup/vxdemo/assets/146210764/1f12e2a5-8c43-4b8f-a38e-cbc4cc03e890)
+
 HQ-SRV
+
 Создаем пользователя Admin с паролем P@ssw0rd
+
 ![image](https://github.com/vxsetup/vxdemo/assets/146210764/aca7e195-94a2-4e03-b228-ae170a181819)
+
 --force-badname это защита от дураков
+
 ![image](https://github.com/vxsetup/vxdemo/assets/146210764/797ed511-b00b-4222-9335-131b474e292b)
+
 HQ-R
+
 ![image](https://github.com/vxsetup/vxdemo/assets/146210764/c080e6ee-ba6a-4ee3-a438-06057334e783)
 
 ![image](https://github.com/vxsetup/vxdemo/assets/146210764/89a117fa-25c0-4f79-8154-17efcc7e632a)
