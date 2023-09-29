@@ -1,4 +1,4 @@
-![image](https://github.com/vxsetup/vxdemo/assets/146210764/7529b8e8-17bf-4837-adc1-800679a4e3f3)МОДУЛЬ 2
+МОДУЛЬ 2
 
 НАСТРОЙКА DNS на HQ-SRV
 
