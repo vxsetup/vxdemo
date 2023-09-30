@@ -52,11 +52,11 @@
 
 дописываем  listen-on {any;};
 
-![Снимок экрана 2023-09-30 132434](https://github.com/vxsetup/vxdemo/assets/146210764/004fea4d-f9ff-4ce6-aa09-72416940b82d)
+![image](https://github.com/vxsetup/vxdemo/assets/146210764/28f9f531-3040-46db-ab01-68677416ef9b)
 
 теперь копируем db.empty в master с названием, которое указывали в named.conf.zones это будет наша база адресов
 
-![image](https://github.com/vxsetup/vxdemo/assets/146210764/17324395-622d-4548-b948-78bfd9718d65)
+![Снимок экрана 2023-09-30 132434](https://github.com/vxsetup/vxdemo/assets/146210764/3c3dff2e-3391-4f1c-a09f-1835f6a40e86)
 
 открываем, видим это
 
