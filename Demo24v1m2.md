@@ -1,4 +1,4 @@
-![image](https://github.com/vxsetup/vxdemo/assets/146210764/74879945-64a8-4d93-948d-5e772f5c4583)МОДУЛЬ 2
+МОДУЛЬ 2
 
 НАСТРОЙКА DNS на HQ-SRV
 
@@ -375,6 +375,8 @@ usermod -aG network Network_admin
 Теперь меняем владельцев папок
 
 Для каждой папки будет свой
+
+![image](https://github.com/vxsetup/vxdemo/assets/146210764/74879945-64a8-4d93-948d-5e772f5c4583)
 
 ![image](https://github.com/vxsetup/vxdemo/assets/146210764/14c013f8-99a3-4d4b-a394-497e9ed17553)
 
