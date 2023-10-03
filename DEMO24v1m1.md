@@ -322,8 +322,6 @@ BR-SRV
 
 ![image](https://github.com/vxsetup/vxdemo/assets/146210764/eb4018f4-69aa-4be9-b0a6-6e4fbb35ee63)
 
-отключаем вход рут пользователю
-
 Включаем авторизацию по паролю
 
 ![image](https://github.com/vxsetup/vxdemo/assets/146210764/1bbcd6bf-16c5-4037-aeeb-1fd8ddfa5c2f)
