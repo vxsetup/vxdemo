@@ -1,4 +1,4 @@
-МОДУЛЬ 2
+![image](https://github.com/vxsetup/vxdemo/assets/146210764/74879945-64a8-4d93-948d-5e772f5c4583)МОДУЛЬ 2
 
 НАСТРОЙКА DNS на HQ-SRV
 
@@ -297,6 +297,174 @@
 ![image](https://github.com/vxsetup/vxdemo/assets/146210764/7a8fe8e6-0479-4ec0-9186-b40290647296)
 
 ![image](https://github.com/vxsetup/vxdemo/assets/146210764/4f25e224-131b-426a-ba17-2de40204902a)
+
+3,4 ДОМЕН И ФАЙЛОВЫЙ СЕРВЕР
+
+![image](https://github.com/vxsetup/vxdemo/assets/146210764/23da32db-2a15-49e4-bb38-0407e914337c)
+
+Заходим nano /etc/samba/smb.conf
+
+![image](https://github.com/vxsetup/vxdemo/assets/146210764/38cf344e-2a6e-4af4-8624-207b31e645fc)
+
+Workgroup = это наш домен
+
+Realm = каким будет нащ домен на винде
+
+Server_string = описание сервера
+
+Переходим на BR-SRV
+ 
+Заходим nano /etc/samba/smb.conf
+
+![image](https://github.com/vxsetup/vxdemo/assets/146210764/0bee97b7-cc55-40ea-8fbc-99598ddb154e)
+
+![image](https://github.com/vxsetup/vxdemo/assets/146210764/d51c3647-de56-4e80-9441-35cf8cab50b1)
+
+HQ-SRV :
+
+Заходим nano /etc/samba/smb.conf
+
+Листаем до конца файла
+
+Добавляем наши сетевые папки
+
+![image](https://github.com/vxsetup/vxdemo/assets/146210764/6bcee7a9-37dc-47ee-98e8-6c21a0f721f8)
+
+Comment = описание в сети что это за папка
+
+Path = путь до шареной папки на нашем серваке
+
+Read only = no – запрещаем только чтение
+
+Browsable = отображение в списке шар 
+
+Valid users = ИЗБРАННЫЕ, КОМУ МОЖНО ЮЗАТЬ ПАПКУ
+
+Создаем группы избранных
+
+![image](https://github.com/vxsetup/vxdemo/assets/146210764/a606a272-aa3a-49a9-a62a-2b8e417835ce)
+
+![image](https://github.com/vxsetup/vxdemo/assets/146210764/f99fd232-1a0e-481c-a4be-bad9ab50f317)
+
+![image](https://github.com/vxsetup/vxdemo/assets/146210764/33b9dfc3-02de-4b93-b0e6-98f42c2fb5a5)
+
+Устанавливаем сетевой пароль на пользователя (чтобы подключаться к шаре)
+
+![image](https://github.com/vxsetup/vxdemo/assets/146210764/f700db0e-1f91-48d1-9d2f-86f2dbe86737)
+
+![image](https://github.com/vxsetup/vxdemo/assets/146210764/4ab4e49f-7c27-40d6-8309-4f8919d09948)
+
+![image](https://github.com/vxsetup/vxdemo/assets/146210764/c125c3c0-f4ec-46a7-b06f-488cdec319ad)
+
+Теперь добавляем пользователей в группы избранных
+
+![image](https://github.com/vxsetup/vxdemo/assets/146210764/3d1ce0da-35f6-47d7-83db-336d4bdbd88f)
+
+usermod -aG admin Admin
+
+usermod -aG network Network_admin
+
+Создаем папки которые будут шарами
+
+![image](https://github.com/vxsetup/vxdemo/assets/146210764/e0bbf046-7435-442c-99df-c99acc757c78)
+
+![image](https://github.com/vxsetup/vxdemo/assets/146210764/11559894-bd1d-4698-b79a-aa82af974bef)
+
+![image](https://github.com/vxsetup/vxdemo/assets/146210764/e8279158-b748-4d4b-be10-cc92849eb296)
+
+Теперь меняем владельцев папок
+
+Для каждой папки будет свой
+
+![image](https://github.com/vxsetup/vxdemo/assets/146210764/14c013f8-99a3-4d4b-a394-497e9ed17553)
+
+![image](https://github.com/vxsetup/vxdemo/assets/146210764/67017846-931a-4286-b5fa-b3f7ff7339f3)
+
+![image](https://github.com/vxsetup/vxdemo/assets/146210764/124854c0-a6a7-4446-bfc2-b1a6b2e8b0e9)
+
+Далее изменяем доступ 
+
+0770 это себе, группе, но не чужим
+
+![image](https://github.com/vxsetup/vxdemo/assets/146210764/22362734-659f-40b5-9b9d-de37b183ad57)
+
+![image](https://github.com/vxsetup/vxdemo/assets/146210764/dbc9610b-493b-4d9c-814d-808bfb4a79d2)
+
+![image](https://github.com/vxsetup/vxdemo/assets/146210764/3bf45618-8774-46e5-94cf-0b080afdbf75)
+
+Папки готовы, теперь их можно монтировать на других машинах
+
+Начнем с HQ-R
+
+Создаем юзверя Network_admin, ставим ему сетевой пароль
+
+![image](https://github.com/vxsetup/vxdemo/assets/146210764/9051304a-0b69-4b0c-aad3-becf07898f78)
+
+Теперь Admin
+
+![image](https://github.com/vxsetup/vxdemo/assets/146210764/cac0ed45-8336-4e3b-924d-1b24eb18095d)
+
+![image](https://github.com/vxsetup/vxdemo/assets/146210764/d2556060-45ca-4dfe-a880-41cdf545cc27)
+
+Для монтирования заходим nano /etc/fstab
+
+И пишем 
+
+//40.40.40.30/Admin_files = адрес сетевой папки
+
+/mnt/All_files/ = куда монтируем папку
+
+Cifs = файловая система граничная с windows
+
+Username = Admin = кто будет подключаться
+
+Пароль не пишем, чтобы логиниться при mount -a 
+
+Uid = 1001 = уникальный айди пользователя, которого мы создали
+
+Iocharset = utf8 = хз что это, думаю что можно не писать
+
+Nofail = без ошибок (этим все сказано)
+
+_netdev = сетевое устройство = будет отключаться, при выключении машины
+
+0 0 = так надо, доверьтесь
+
+![image](https://github.com/vxsetup/vxdemo/assets/146210764/0f5d5517-b037-4a02-9ae8-e5e9c99750d3)
+
+Для монтирования папки network = пишем то же и самое, только меняем пользователя, юид и само название папки и куда монтируем
+
+Выходим сохраняем 
+
+Создаем папки куда будем монтировать
+
+![image](https://github.com/vxsetup/vxdemo/assets/146210764/ba294217-2945-402a-8aa9-04234fc3dc38)
+
+![image](https://github.com/vxsetup/vxdemo/assets/146210764/7608900c-c1d7-433e-ae01-6e54101848d1)
+
+Пишем mount -a 
+
+СПЕЦИАЛЬНО РУИНИМ ПЕРВЫЙ ВВОД ПАРОЛЯ ДЛЯ ПЕРВОЙ ПАПКИ
+
+ВТОРУЮ ПИШЕМ НОРМАЛЬНО
+
+ОДНА ПАПКА СМОНТИРОВАЛАСЬ
+
+ПИШЕМ mount -a ЗАНОВО 
+
+МОНТИРУЕМ ВТОРУЮ ПАПКУ
+
+![image](https://github.com/vxsetup/vxdemo/assets/146210764/59a3b711-c1dd-4fc7-a5ea-71a474c8f5c9)
+
+ЭТИ МАХИНАЦИИ ДЛЯ ТОГО ЧТОБЫ СМОНТИРОВАЛОСЬ ПО ОЧЕРЕДИ ИНАЧЕ ТАМ СТРАШНО 
+
+![image](https://github.com/vxsetup/vxdemo/assets/146210764/713f68fe-902f-42ae-84ab-caeb20a0dc56)
+
+Чекаем папки ls -l и видим наших сетевых юзверей
+
+Осталось повторить такие же манипуляции на других машинах, делаем так же по гайду, не забывая менять буковы и цифры 
+
+![image](https://github.com/vxsetup/vxdemo/assets/146210764/3a4d056c-8c70-4fd0-8ca6-460b5589092d)
 
 To be continued...
 
