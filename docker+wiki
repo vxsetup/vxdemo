@@ -1,0 +1,13 @@
+apt-get install docker.io docker-compose
+systemctl enable --now docker.service
+nano ~/wiki.yml
+ CONTAINER
+  ------------------------------------------
+ 
+-----------------------------------
+  P.S.
+После первоначальной настройки через Web-интерфейс с CLI загрузите LocalSettings.php в тот же каталог, что и эта wiki.yml и раскомментируйте следующую строку 
+"# - ./LocalSettings.php:/var/www/html/LocalSettings.php" и используйте docker-compose для перезапуска службы mediawiki
+docker volume create dbvolume
+docker-compose -f wiki.yml up -d
+#CLI:
