@@ -8,8 +8,8 @@ nano ~/wiki.yml
 docker volume create dbvolume
 docker-compose -f wiki.yml up -d
 #CLI:
-sudo echo 10.4.4.26 mediawiki.demo.wsr mediawiki >> /etc/hosts
-open in browser mediawiki.demo.wsr:8080
+sudo echo 10.4.4.26 mediawiki.demo.vxstp mediawiki >> /etc/hosts
+open in browser mediawiki.demo.vxstp:8080
 -------------
 host - db
 name - mediawiki
