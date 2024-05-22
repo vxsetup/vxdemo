@@ -23,6 +23,8 @@ samba-tool domain provision
 
 ![image](https://github.com/vxsetup/vxdemo/assets/146210764/4e9b8da5-459b-4906-8d09-e7a7ed88f047)
 
+если будет ошибка - удалить файл  smb.conf
+
 
 #После настройки
 
