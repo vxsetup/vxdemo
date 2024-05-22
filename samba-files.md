@@ -8,25 +8,7 @@
 
 ![image](https://github.com/vxsetup/vxdemo/assets/146210764/9d304762-b871-46b2-a894-3bc1a483f915)
 
-<volume cr uid="Admin demo.FIRST
-  fstype="cifs"
-  server="hq-srv.demo.first"
-  path="Admin_Files"
-  mount point="/mnt/All_Files"
-  options="nodev,nosuid,file_mode=0665,dir_mode=0777"/>
-<volume cruid="Network admin@DEMO. FIRST"
-  fstype="cifs"
-  server="hq-srv.demo.first"
-  path="Network".
-  mount point="/mnt/All_Files"
-  options="nodev, nosuid,file_mode=0665,dir_mode=0777"/>
-<volume cruise="Branch admin@DEMO.FIRST "
-  fstype="cifs"
-  server="hq-srv.demo.first"
-  path="Branch_Files"
-  mount point="/mnt/All_Files"
-opt  ions="nodev, nosuid,file_mode=0665,dir_mode=0777"/>
-
+nano /etc/security/pam_mount.conf.xml
 
 ![image](https://github.com/vxsetup/vxdemo/assets/146210764/84bfc9e5-b0e0-4931-b996-d28424d922c4)
 
