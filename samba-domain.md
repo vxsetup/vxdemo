@@ -16,14 +16,13 @@ systemctl stop bind9
 
 #bckup
 cp /etc/samba/smb.conf /etc/samba/smb.conf.bak
+УДАЛЯЕМ ПРЕЖНИЙ КОНФИГ
 
 #Start domain install 
 
 samba-tool domain provision
 
 ![image](https://github.com/vxsetup/vxdemo/assets/146210764/4e9b8da5-459b-4906-8d09-e7a7ed88f047)
-
-если будет ошибка - удалить файл  smb.conf
 
 
 #После настройки
@@ -35,6 +34,7 @@ samba-tool domain provision
 #Reboot samba
 
 systemctl restart samba-ad-dc
+РЕБУТАЕМ СЕРВАК НАХЕР
 
 named-checkconnf -z
 
