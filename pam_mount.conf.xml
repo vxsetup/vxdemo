@@ -1,5 +1,5 @@
 
-<volume cruid="Admin@DEMO.FIRST
+<volume cruid="Admin@DEMO.FIRST"
   fstype="cifs"
   server="hq-srv.demo.first"
   path="Admin_Files"
@@ -9,7 +9,7 @@
 <volume cruid="Network admin@DEMO.FIRST"
   fstype="cifs"
   server="hq-srv.demo.first"
-  path="Network".
+  path="Network"
   mountpoint="/mnt/All_Files"
   options="nodev,nosuid,file_mode=0665,dir_mode=0777"/>
 
