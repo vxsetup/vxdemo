@@ -22,6 +22,7 @@ cp /etc/samba/smb.conf /etc/samba/smb.conf.bak
 samba-tool domain provision
 
 #После настройки
+
 ![image](https://github.com/vxsetup/vxdemo/assets/146210764/ec73bfd3-cd18-4f61-a9b3-04a080174958)
 
 ![image](https://github.com/vxsetup/vxdemo/assets/146210764/61ed9e82-90fc-4ec5-8164-5c48589d5471)
