@@ -1,5 +1,9 @@
 НАСТРОЙКА НА HQ-SRV
 
+
+![image](https://github.com/vxsetup/vxdemo/assets/146210764/9b8bacca-5c57-449c-9e3d-844738ad6037)
+
+
 ![image](https://github.com/vxsetup/vxdemo/assets/146210764/cb4cb9db-e835-4248-9b23-d2021bedde91)
 
 apt install samba krb5-user krb5-config winbind smbclient libpam-winbind libnss-winbind libpam-krb5 krb5-kdc -y
