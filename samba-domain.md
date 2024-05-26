@@ -1,6 +1,8 @@
 НАСТРОЙКА НА HQ-SRV
 
 
+ДОМЕН БЛЯ HQ.WORK ВМЕСТО DEMO.FIRST
+
 ![image](https://github.com/vxsetup/vxdemo/assets/146210764/9b8bacca-5c57-449c-9e3d-844738ad6037)
 
 
