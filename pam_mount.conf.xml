@@ -1,21 +1,21 @@
 
-<volume cruid="Admin@DEMO.FIRST"
+<volume cruid="Admin@HQ.WORK"
   fstype="cifs"
-  server="hq-srv.demo.first"
+  server="hq-srv.hq.work"
   path="Admin_Files"
   mountpoint="/mnt/All_Files"
   options="nodev,nosuid,file_mode=0665,dir_mode=0777"/>
   
-<volume cruid="Network admin@DEMO.FIRST"
+<volume cruid="Network_admin@HQ.WORK"
   fstype="cifs"
-  server="hq-srv.demo.first"
+  server="hq-srv.hq.work"
   path="Network"
   mountpoint="/mnt/All_Files"
   options="nodev,nosuid,file_mode=0665,dir_mode=0777"/>
 
-<volume cruid="Branch admin@DEMO.FIRST"
+<volume cruid="Branch_admin@HQ.WORK"
   fstype="cifs"
-  server="hq-srv.demo.first"
+  server="hq-srv.hq.work"
   path="Branch_Files"
   mountpoint="/mnt/All_Files"
   options="nodev,nosuid,file_mode=0665,dir_mode=0777"/>
