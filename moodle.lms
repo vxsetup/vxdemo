@@ -1,8 +1,8 @@
 #install apache2
 
-apt-get install apache2 apache2-utils git
-  systemctl status apache2
-  sudo systemctl enable apache2
+apt-get install nginx git
+  systemctl status nginx
+  sudo systemctl enable nginx
 sudo apt install mariadb-server mariadb-client
   sudo systemctl enable mariadb
 mysql_secure_installation
@@ -63,7 +63,7 @@ upload_max_filesize = 80M
 
 # reboot apache
 
-/etc/init.d/apache2 restart
+/etc/init.d/nginx restart
 
 # Add some changes in maria config
 
@@ -87,7 +87,7 @@ sudo apt-get install php-curl php-zip php-xml
 
 # reboot apache
 
-/etc/init.d/apache2 restart
+/etc/init.d/nginx restart
 
 #Open web-morda moodle
 
@@ -116,7 +116,7 @@ sudo apt-get install php-mbstring
 
 #reboot apache
 
-/etc/init.d/apache2 restart
+/etc/init.d/nginx restart
 
 # Install next independence
 
