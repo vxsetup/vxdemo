@@ -21,7 +21,7 @@ services:
       MYSQL_PASSWORD: DEP@ssw0rd
       MYSQL_RANDOM_ROOT_PASSWORD: 'yes'
     volumes:
-      - db:/var/lib/mysql
+      - dbvolume:/var/lib/mysql
 
 volumes:
   images:
